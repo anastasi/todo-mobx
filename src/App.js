@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './App.css'
 import {inject, observer} from 'mobx-react'
+import List from './List/List';
 
 @inject('TodoList')
 @observer
@@ -22,7 +23,7 @@ class App extends Component {
             <button>Add</button>
            </form>
          </h2>
-         <ul>{TodoList.lists.map(item => <li key={item}>{item}</li>)}</ul>
+        <List />
       </div>
     );
   }
