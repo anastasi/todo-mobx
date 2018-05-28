@@ -1,18 +1,17 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
+import {inject, observer} from 'mobx-react'
 
+@inject('TodoList')
 class App extends Component {
   render() {
+    const {TodoList} = this.props
+
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+         <h2>
+           You have {TodoList.listCount} todo!
+         </h2>
       </div>
     );
   }

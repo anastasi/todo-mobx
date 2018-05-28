@@ -8,7 +8,7 @@ class TodoList{
     }
 
     @computed get listCount(){
-        return this.lists.size;
+        return this.lists.length;
     };
 }
 
