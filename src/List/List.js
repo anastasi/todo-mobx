@@ -9,7 +9,9 @@ class List extends Component {
 
     return (
       <div className="List">
-        <ul>{TodoList.lists.map(item => <li key={item}>{item}</li>)}</ul>
+        <ul>{TodoList.lists.map(
+            item => <li key={item.name}><input type="checkbox" ref={ input => this.todo = input} />{item.name}</li>
+          )}</ul>
       </div>
     );
   }

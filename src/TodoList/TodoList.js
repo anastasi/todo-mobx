@@ -1,10 +1,14 @@
 import {observable, action, computed} from 'mobx';
 
 class TodoList{
-    @observable lists = [];
+    @observable lists = []
 
     @action addList = (list) => {
-        this.lists.push(list);
+        const newItem = {
+            name: list,
+            completed: false
+        }
+        this.lists.push(newItem);
     }
 
     @computed get listCount(){
