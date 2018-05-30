@@ -11,6 +11,7 @@ class App extends Component {
     this.props.TodoList.addList(this.todo.value);
     e.target.reset();
   }
+  
   render() {
     const {TodoList} = this.props
 
@@ -23,6 +24,7 @@ class App extends Component {
             <button>Add</button>
            </form>
          </h2>
+         <h2>You have {TodoList.completedCount} completed tasks!</h2>
         <List />
       </div>
     );
