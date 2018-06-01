@@ -5,10 +5,8 @@ import {inject, observer} from 'mobx-react'
 @observer
 class List extends Component {
 
-  handleChange = e => {
-    e.preventDefault();
-    //this.props.TodoList.addList(this.todo.value);
-    // this.props.TodoList.completeList(0)
+  handleChange = index => {
+    this.props.TodoList.toggleCompleted(index)
   }
   render() {
     const {TodoList} = this.props
@@ -16,7 +14,10 @@ class List extends Component {
     return (
       <div className="List">
         <ul>{TodoList.lists.map(
-            item => <li key={item.name}><input type="checkbox" onChange={this.handleChange} />{item.name}</li>
+            (item, index) => 
+              <li key={item.name}>
+               <input type="checkbox" onChange={ (e) => this.handleChange(index) } /> {item.name}
+              </li>
           )}</ul>
       </div>
     );

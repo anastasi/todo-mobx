@@ -10,19 +10,19 @@ class TodoList{
         }
         this.lists.push(newItem);
     }
-    @action completeList = (index) => {
-        this.lists[index].completed = true
+    @action toggleCompleted = (index) => {
+        this.lists[index].completed = !this.lists[index].completed
     }
 
     
     @computed get listCount(){
         return this.lists.length;
-    };
+    }
     @computed get completedCount(){
         return this.lists.filter(
             todo => todo.completed === true
         ).length;
-    };
+    }
 }
 
 
