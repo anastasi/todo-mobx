@@ -6,7 +6,6 @@ import registerServiceWorker from './registerServiceWorker';
 import {Provider} from  'mobx-react';
 import TodoList from './TodoList/TodoList';
 import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/css/bootstrap-theme.css';
 
 const Root = (
     <Provider TodoList={TodoList}>
