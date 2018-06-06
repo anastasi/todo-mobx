@@ -2,7 +2,7 @@
     width: 500px;
     display: block;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 20px 40px;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
@@ -13,7 +13,7 @@
 }
 .Wrapper .FormInput{
     display: inline-block;
-    width: auto;
+    width: 260px;
     border-radius: 0;
 }
 .Wrapper .FormButton{

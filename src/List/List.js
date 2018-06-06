@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
-import {inject, observer} from 'mobx-react'
+import React, { Component } from 'react';
+import {inject, observer} from 'mobx-react';
+import './List.css';
 
 @inject('TodoList')
 @observer
@@ -12,14 +13,12 @@ class List extends Component {
     const {TodoList} = this.props
 
     return (
-      <div className="List">
-        <ul>{TodoList.lists.map(
-            (item, index) => 
-              <li key={item.name}>
-               <input type="checkbox" onChange={ (e) => this.handleChange(index) } /> {item.name}
-              </li>
-          )}</ul>
-      </div>
+      <ul className="List">{TodoList.lists.map(
+          (item, index) => 
+            <li key={item.name}>
+              <input type="checkbox" onChange={ (e) => this.handleChange(index) } /> {item.name}
+            </li>
+        )}</ul>
     );
   }
 }

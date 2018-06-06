@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import {inject, observer} from 'mobx-react';
 import List from './List/List';
-import Wrapper from './Wrapper.css';
+import './Wrapper.css';
 import { Button, Form, FormGroup, Label, FormText, Jumbotron, Container, Row, Col } from 'reactstrap';
 
 @inject('TodoList')
