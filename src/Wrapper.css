@@ -1,0 +1,30 @@
+.Wrapper{
+    width: 500px;
+    display: block;
+    margin: 0 auto;
+    padding: 0 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 4px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(25,25,25,.25);
+}
+.Wrapper .FormInput{
+    display: inline-block;
+    width: auto;
+    border-radius: 0;
+}
+.Wrapper .FormButton{
+    display: inline-block;
+    width: 20%;
+    border-radius: 0;
+    vertical-align: top;
+}
+.Wrapper .Status{
+    font-size: 12px;
+}
+.StatusSpace{
+    margin-top: 30px;
+}
